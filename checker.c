@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
 #include <stdbool.h>
- 
+
+void printOnConsole(char* message){
+printf("%s",message); 
+}
+
 int isOutOfRange(float value, float LB, float UB)
 {
   return (value < LB || value > UB);
@@ -15,15 +19,16 @@ bool batteryIsOk(float temperature, float soc, float chargeRate)
   int count = 0;
   count = count + isOutOfRange(temperature, 0, 45);
   count = count + isOutOfRange(soc, 20, 80);
-  count = count + isGreaterThan(chargeRate, 0.8);
-  printf("count value: %d\n", count);
+  count = count + isOutOfRange(chargeRate,0,0.8);
+
   if (count > 1)
   {
-    printf("Battery not okay\n");
+    printOnConsole("Battery not okay\n");
     return false;
   }
   else
   {
+    printOnConsole("Battery okay\n");
     return true;
   }
 }
