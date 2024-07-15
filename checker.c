@@ -4,7 +4,14 @@
 
 void printOnConsole( int tempCount, int socCount, int chargeRatecount)
 {
-printf("Battery status : temp= %d,Soc= %d,ChargeRate= %d,\n",tempCount,socCount,chargeRatecount); 
+  if(tempCount||socCount||chargeRatecount)
+  {
+    printf("Battery Not ok"); 
+  }
+  else
+  {
+    printf("Battery status : temp= %d,Soc= %d,ChargeRate= %d,\n",tempCount,socCount,chargeRatecount); 
+  }
 }
 
 int isOutOfRange(float value, float LB, float UB)
