@@ -4,13 +4,13 @@
 
 void printOnConsole( int tempCount, int socCount, int chargeRatecount)
 {
-  if(tempCount||socCount||chargeRatecount)
+  if((tempCount||socCount||chargeRatecount)==0)
   {
-    printf("Battery Not ok"); 
+    printf("Battery Not ok\n"); 
   }
   else
   {
-    printf("Battery status : temp= %d,Soc= %d,ChargeRate= %d,\n",tempCount,socCount,chargeRatecount); 
+    printf("Battery status : temp= %d,Soc= %d,ChargeRate= %d\n",tempCount,socCount,chargeRatecount); 
   }
 }
 
