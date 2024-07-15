@@ -16,19 +16,22 @@ int isGreaterThan(float value, float threshold)
 }
 bool batteryIsOk(float temperature, float soc, float chargeRate) 
 { 
-  int count = 0;
-  count = count + isOutOfRange(temperature, 0, 45);
-  count = count + isOutOfRange(soc, 20, 80);
-  count = count + isOutOfRange(chargeRate,0,0.8);
+  int tempCount = 0;
+  int socCount = 0;
+  int chargeRatecount = 0;
+  
+  tempCount = tempCount + isOutOfRange(temperature, 0, 45);
+  socCount = socCount + isOutOfRange(soc, 20, 80);
+  chargeRatecount = chargeRatecount + isOutOfRange(chargeRate,0,0.8);
 
-  if (count > 1)
+  if (tempCount > 1 || socCount > 1 || chargeRatecount > 1 )
   {
     printOnConsole("Battery not okay\n");
     return false;
   }
   else
   {
-    printOnConsole("Battery okay\n");
+    printOnConsole("Battery okay %d,%d,%d,\n",tempCount,socCount,chargeRatecount);
     return true;
   }
 }
