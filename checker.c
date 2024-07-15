@@ -2,9 +2,9 @@
 #include <assert.h>
 #include <stdbool.h>
 
-void printOnConsole( int tempCount = 0, int socCount = 0, int chargeRatecount = 0)
+void printOnConsole( int tempCount, int socCount, int chargeRatecount)
 {
-printf("Battery okay %d,%d,%d,\n",tempCount,socCount,chargeRatecount); 
+printf("Battery status : temp= %d,Soc= %d,ChargeRate= %d,\n",tempCount,socCount,chargeRatecount); 
 }
 
 int isOutOfRange(float value, float LB, float UB)
@@ -27,12 +27,12 @@ bool batteryIsOk(float temperature, float soc, float chargeRate)
 
   if (tempCount > 1 || socCount > 1 || chargeRatecount > 1 )
   {
-    printOnConsole("Battery not okay\n");
+     printOnConsole(tempCount,socCount,chargeRatecount);
     return false;
   }
   else
   {
-    printOnConsole("Battery okay %d,%d,%d,\n",tempCount,socCount,chargeRatecount);
+    printOnConsole(tempCount,socCount,chargeRatecount);
     return true;
   }
 }
