@@ -2,8 +2,9 @@
 #include <assert.h>
 #include <stdbool.h>
 
-void printOnConsole(char* message){
-printf("%s",message); 
+void printOnConsole( int tempCount = 0, int socCount = 0, int chargeRatecount = 0)
+{
+printf("Battery okay %d,%d,%d,\n",tempCount,socCount,chargeRatecount); 
 }
 
 int isOutOfRange(float value, float LB, float UB)
