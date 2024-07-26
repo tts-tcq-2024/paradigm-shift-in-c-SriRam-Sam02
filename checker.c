@@ -10,7 +10,7 @@ void printOnConsole( int tempCount, int socCount, int chargeRatecount)
   }
   else
   {
-    printf("Battery status : temp= %d,Soc= %d,ChargeRate= %d\n",tempCount,socCount,chargeRatecount); 
+     printf("Battery ok, Battery status : temp= %d,Soc= %d,ChargeRate= %d\n, ",tempCount,socCount,chargeRatecount);
   }
 }
 
