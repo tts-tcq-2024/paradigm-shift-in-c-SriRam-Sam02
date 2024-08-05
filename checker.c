@@ -1,50 +1,22 @@
-#include <stdio.h>
 #include <assert.h>
 #include <stdbool.h>
+#include "Battery_Condition_Status.h"
+#include "WarningChecker.h"
 
-void printOnConsole( int tempCount, int socCount, int chargeRatecount)
-{
-  if((tempCount||socCount||chargeRatecount)==0)
-  {
-    printf("Battery Not ok\n"); 
-  }
-  else
-  {
-     printf("Battery ok, Battery status : temp= %d,Soc= %d,ChargeRate= %d\n, ",tempCount,socCount,chargeRatecount);
-  }
-}
+ParameterConfig SoC = {20, 80, 0.05, true};
+ParameterConfig Temperature = {0, 45, 0.05, true};
+ParameterConfig Charge_rate = {0, 0.8, 0.05, true};
 
-int isOutOfRange(float value, float LB, float UB)
-{
-  return (value < LB || value > UB);
-}
-int isGreaterThan(float value, float threshold)
-{
-  return (value > threshold);
-}
-bool batteryIsOk(float temperature, float soc, float chargeRate) 
-{ 
-  int tempCount = 0;
-  int socCount = 0;
-  int chargeRatecount = 0;
-  
-  tempCount = tempCount + isOutOfRange(temperature, 0, 45);
-  socCount = socCount + isOutOfRange(soc, 20, 80);
-  chargeRatecount = chargeRatecount + isOutOfRange(chargeRate,0,0.8);
-
-  if (tempCount > 1 || socCount > 1 || chargeRatecount > 1 )
-  {
-     printOnConsole(tempCount,socCount,chargeRatecount);
-    return false;
-  }
-  else
-  {
-    printOnConsole(tempCount,socCount,chargeRatecount);
-    return true;
-  }
-}
 int main()
 {
-  assert(batteryIsOk(25, 70, 0.7) == true);
-  assert(batteryIsOk(50, 85, 0) == false);
+    float config_SoC = 90;
+    float config_Temperature = 20;
+    float config_Charge_rate = 0.5;
+    
+    assert(check_parameter("SoC", config_SoC, SoC));
+    assert(check_parameter("Temperature", config_Temperature, Temperature));
+    assert(check_parameter("Charge_rate", config_Charge_rate, Charge_rate));
+
+    return 0;  
 }
+
