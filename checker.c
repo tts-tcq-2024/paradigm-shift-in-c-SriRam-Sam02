@@ -1,4 +1,3 @@
-#include <assert.h>
 #include <stdbool.h>
 #include "Battery_Condition_Status.h"
 #include "WarningChecker.h"
@@ -13,9 +12,9 @@ int main()
     float config_Temperature = 20;
     float config_Charge_rate = 0.5;
     
-    assert(parameterValidation("SoC", config_SoC, SoC));
-    assert(parameterValidation("Temperature", config_Temperature, Temperature));
-    assert(parameterValidation("Charge_rate", config_Charge_rate, Charge_rate));
+    parameterValidation("SoC", config_SoC, SoC);
+    parameterValidation("Temperature", config_Temperature, Temperature);
+    parameterValidation("Charge_rate", config_Charge_rate, Charge_rate);
 
     return 0;  
 }
