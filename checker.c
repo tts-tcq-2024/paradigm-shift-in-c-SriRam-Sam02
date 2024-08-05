@@ -13,9 +13,9 @@ int main()
     float config_Temperature = 20;
     float config_Charge_rate = 0.5;
     
-    assert(check_parameter("SoC", config_SoC, SoC));
-    assert(check_parameter("Temperature", config_Temperature, Temperature));
-    assert(check_parameter("Charge_rate", config_Charge_rate, Charge_rate));
+    assert(parameterValidation("SoC", config_SoC, SoC));
+    assert(parameterValidation("Temperature", config_Temperature, Temperature));
+    assert(parameterValidation("Charge_rate", config_Charge_rate, Charge_rate));
 
     return 0;  
 }
