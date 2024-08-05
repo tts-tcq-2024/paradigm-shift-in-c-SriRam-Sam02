@@ -3,7 +3,7 @@
 #include "Battery_Condition_Status.h"
 #include "WarningChecker.h"
 
-void displayWarning(const char* param_name, int* message_index) {
+void displayWarning(const char* param_name, int message_index) {
     printf("Checking parameters values:\n");
     printf("%s: %s\n", param_name, messages[language][message_index]); 
 }
