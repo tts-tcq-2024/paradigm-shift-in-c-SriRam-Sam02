@@ -1,5 +1,6 @@
 #ifndef BATTERY_CONDITION_STATUS_H
 #define BATTERY_CONDITION_STATUS_H
+#include <stdbool.h>
 
 enum Language { ENGLISH, GERMAN };
 enum Language language = 1;
