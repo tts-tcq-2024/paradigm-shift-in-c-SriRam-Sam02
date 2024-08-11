@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "Battery_Condition_Status.h"
+#include "battery_Condition_Status.h"
 
 
 int isLessThan(float value, ParameterConfig config) {
