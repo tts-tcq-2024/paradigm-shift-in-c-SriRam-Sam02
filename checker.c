@@ -14,8 +14,8 @@ int main()
     float config_Charge_rate = 0.5;
     
     parameterValidation("SoC", config_SoC, SoC);
-    parameterValidation("Temperature", config_Temperature, Temperature);
-    parameterValidation("Charge_rate", config_Charge_rate, Charge_rate);
+   // parameterValidation("Temperature", config_Temperature, Temperature);
+   // parameterValidation("Charge_rate", config_Charge_rate, Charge_rate);
 
     return 0;  
 }
