@@ -1,4 +1,5 @@
 #include "Battery_Condition_Status.h"
+#include "WarningChecker.h"
 
 ParameterConfig SoC = {20, 80, 0.05, true};
 ParameterConfig Temperature = {0, 45, 0.05, true};
