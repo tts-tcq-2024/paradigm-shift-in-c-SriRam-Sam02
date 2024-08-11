@@ -1,13 +1,5 @@
 #ifndef BATTERY_CONDITION_STATUS_H
 #define BATTERY_CONDITION_STATUS_H
-#include <stdbool.h>
-
-typedef struct {
-    float min;
-    float max;
-    float warning_tolerance;
-    bool enable_warning;
-} ParameterConfig;
 
 int isLessThan(float value, ParameterConfig config);
 int isGreaterThan(float value, ParameterConfig config);
