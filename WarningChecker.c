@@ -1,3 +1,4 @@
+#include "Battery_Condition_Status.h"
 #include "WarningChecker.h"
 
 
