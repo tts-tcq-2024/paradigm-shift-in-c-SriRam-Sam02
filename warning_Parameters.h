@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 enum Language { ENGLISH, GERMAN };
-extern enum Language language = 1;
+enum Language language = 1;
 
 const char *messages[2][5] = {
     {
@@ -28,5 +28,7 @@ typedef struct {
     float warning_tolerance;
     bool enable_warning;
 } ParameterConfig;
+
+extern Messages messages[][];
 
 #endif
