@@ -29,6 +29,4 @@ typedef struct {
     bool enable_warning;
 } ParameterConfig;
 
-extern const char messages[][];
-
 #endif
