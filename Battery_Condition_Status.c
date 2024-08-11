@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "WarningChecker.h"
 #include "Battery_Condition_Status.h"
 
 void displayWarning(const char* param_name, int message_index) {
