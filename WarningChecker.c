@@ -1,5 +1,5 @@
 #include "WarningChecker.h"
-
+#include "Battery_Condition_Status.h"
 
 int isLessThan(float value, ParameterConfig config) {
     return (value < config.min) ? 3 : 0;
