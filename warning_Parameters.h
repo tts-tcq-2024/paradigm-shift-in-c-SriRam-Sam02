@@ -3,7 +3,7 @@
 #include <stdbool.h>
 
 enum Language { ENGLISH, GERMAN };
-enum Language language = 1;
+extern enum Language language = 1;
 
 const char *messages[2][5] = {
     {
