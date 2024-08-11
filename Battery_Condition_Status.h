@@ -1,5 +1,6 @@
 #ifndef BATTERY_CONDITION_STATUS_H
 #define BATTERY_CONDITION_STATUS_H
+#include "warning_Parameters.h"
 
 int isLessThan(float value, ParameterConfig config);
 int isGreaterThan(float value, ParameterConfig config);
