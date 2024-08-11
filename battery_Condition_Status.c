@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "warning_Parameters.h"
 #include "battery_Condition_Status.h"
 
 
